@@ -1,0 +1,92 @@
+li {
+    position: relative;
+    list-style: none;
+    height: 232px;
+    width: 1000px;
+    background: #fff;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    padding-bottom: 15px;
+}
+
+li:hover {
+    background: #eee;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a img {
+    width: 200px;
+    height: 200px;
+    padding: 5px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin: 20px;
+}
+
+.pic {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.desc {
+    position: absolute;
+    left: 240px;
+    top: 10px;
+}
+
+.price {
+    color: #999;
+}
+
+.price span {
+    text-decoration: line-through;
+}
+
+.star {
+    width: 70px;
+    height: 12px;
+    line-height: 12px;
+    background: url(../img/icon_star.png) repeat-x;
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+    font-size: 0;
+}
+
+.bnCar {
+    position: fixed;
+    top: 20px;
+    left: 900px;
+}
+
+.bn {
+    display: inline-block;
+    text-decoration: none;
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 10px 0 0;
+    background: #C30;
+    color: #FFF;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.bn:hover {
+    background: #FC0;
+    color: #333;
+}

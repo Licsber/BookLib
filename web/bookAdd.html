@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Book Add</title>
+    <link type="text/css" href="css/bookAdd.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="register">
+    <h2>增加图书</h2>
+    <div class="content">
+        <form name="frm1" action="DoBookAddServlet" method="post" enctype="multipart/form-data">
+            <div class="box">
+                <label class="i-label">*图书号</label>
+                <input type="text" name="bookNo" class="i-text"/>
+            </div>
+            <div class="box">
+                <label class="i-label">*书名</label>
+                <input type="text" name="bookName" class="i-text"/>
+            </div>
+            <div class="box">
+                <label class="i-label">作者</label>
+                <input type="text" name="author" class="i-text"/>
+            </div>
+            <div class="box">
+                <label class="i-label">出版社</label>
+                <select name="press" size="1" class="i-text" style="height:21px;">
+                    <option value="清华大学出版社">清华大学出版社</option>
+                    <option value="人民邮电出版社" selected="selected">人民邮电出版社</option>
+                </select>
+            </div>
+            <div class="box">
+                <label class="i-label">出版日期</label>
+                <input type="date" name="pressDate" class="i-text">
+            </div>
+            <div class="box">
+                <label class="i-label">*库存</label>
+                <input type="text" name="bookNum" class="i-text"/>
+            </div>
+            <div class="box">
+                <label class="i-label">*原价</label>
+                <input type="text" name="orgPrice" class="i-text"/>
+            </div>
+            <div class="box">
+                <label class="i-label">现价</label>
+                <input type="text" name="nowPrice" class="i-text"/>
+            </div>
+            <div class="box">
+                <label class="i-label">封面</label>
+                <input type="file" name="bookCover" class="i-text"/>
+            </div>
+            <div class="btns">
+            <span class="i-text">
+            <input type="submit" value="提  交">&nbsp;&nbsp;&nbsp;&nbsp; <input type="reset" value="清  除">
+            </span>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

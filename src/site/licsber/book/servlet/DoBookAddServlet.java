@@ -81,7 +81,7 @@ public class DoBookAddServlet extends HttpServlet {
             book.setNowPrice(nPrice);
 
             BookDB.addBook(book);
-            resp.sendRedirect("bookList.jsp");
+            resp.sendRedirect("BookDisplayServlet");
         } catch (Exception e) {
             resp.getWriter().print(e.getMessage());
         }

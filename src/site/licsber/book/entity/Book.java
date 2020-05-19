@@ -2,18 +2,18 @@ package site.licsber.book.entity;
 
 import lombok.Data;
 
+import java.util.Date;
+
 @Data
 public class Book {
-    private Object bookCartsObj;
-    private Object booksObj;
     private String bookNo;
     private String bookCover;
     private String bookName;
     private float nowPrice;
     private float orgPrice;
-    private int comments;
+    private int comment;
     private String author;
-    private String pressDate;
+    private Date pressDate;
     private String press;
     private int bookNum;
 }

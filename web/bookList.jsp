@@ -46,7 +46,7 @@
                 </p>
                 <p>
                     <span class="star"></span>
-                    <a href="#" target="_blank">❤❤❤❤❤<%=book.getComments() %>条评论</a>
+                    <a href="#" target="_blank">❤❤❤❤❤<%=book.getComment() %>条评论</a>
                 </p>
                 <p>
                     <span><a href=""><%=book.getAuthor() %></a>著</span>

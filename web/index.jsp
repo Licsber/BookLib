@@ -12,7 +12,7 @@
 </head>
 <body>
 <%
-    response.sendRedirect("bookInit.jsp");
+    response.sendRedirect("BookDisplayServlet");
 %>
 </body>
 </html>

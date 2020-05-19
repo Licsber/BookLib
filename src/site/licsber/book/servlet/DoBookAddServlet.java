@@ -2,16 +2,17 @@ package site.licsber.book.servlet;
 
 import com.jspsmart.upload.File;
 import com.jspsmart.upload.SmartUpload;
+import site.licsber.book.db.BookDB;
 import site.licsber.book.entity.Book;
 
 import javax.servlet.ServletConfig;
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.HashMap;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 @WebServlet("/DoBookAddServlet")
 public class DoBookAddServlet extends HttpServlet {
@@ -41,7 +42,8 @@ public class DoBookAddServlet extends HttpServlet {
             String bookName = upload.getRequest().getParameter("bookName");
             String author = upload.getRequest().getParameter("author");
             String press = upload.getRequest().getParameter("press");
-            String pressDate = upload.getRequest().getParameter("pressDate");
+            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            Date pressDate = format.parse(upload.getRequest().getParameter("pressDate"));
             String bookNum = upload.getRequest().getParameter("bookNum");
             String orgPrice = upload.getRequest().getParameter("orgPrice");
             String nowPrice = upload.getRequest().getParameter("nowPrice");
@@ -78,13 +80,7 @@ public class DoBookAddServlet extends HttpServlet {
             book.setOrgPrice(oPrice);
             book.setNowPrice(nPrice);
 
-            @SuppressWarnings("unchecked")
-            HashMap<String, Book> books = (HashMap<String, Book>) req.getSession().getAttribute("books");
-            if (books == null) {
-                books = new HashMap<>();
-            }
-            books.put(book.getBookNo(), book);
-            req.getSession().setAttribute("books", books);
+            BookDB.addBook(book);
             resp.sendRedirect("bookList.jsp");
         } catch (Exception e) {
             resp.getWriter().print(e.getMessage());

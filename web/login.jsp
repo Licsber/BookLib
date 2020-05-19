@@ -23,7 +23,7 @@
 <div id="login">
     <h1>用户登录</h1>
     <hr>
-    <form action="doLogin.jsp" method="post">
+    <form action="LoginServlet" method="post">
         <table>
             <tr>
                 <td>用户名</td>

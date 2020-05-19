@@ -12,7 +12,7 @@
 </head>
 <body>
 
-登陆成功, 123, 稍后将自动跳转！
+登陆成功, ${param["username"]}, 稍后将自动跳转！
 
 <%
     out.print("<script>" +

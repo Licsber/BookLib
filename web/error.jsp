@@ -12,19 +12,13 @@
 </head>
 <body>
 
-登陆失败！ 稍后自动跳转！
-
-<%
-    out.print("您尝试登陆的用户名：");
-    out.print(request.getParameter("username"));
-%>
+登陆失败！${param["username"]}，稍后自动跳转！
 
 <%
     out.print("<script>" +
             "setTimeout(\"window.location='login.jsp'\",2000);" +
             "</script>");
 %>
-
 
 </body>
 </html>

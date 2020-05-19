@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Context reloadable="true">
+    <Resource name="jdbc/bookLib" auth="Container"
+              type="javax.sql.DataSource"
+              maxTotal="800" maxIdle="100"
+              initialSize="30" maxWaitMillis="10000"
+              removeAbandonedOnBorrow="true"
+              removeAbandonedTimeout="60"
+              logAbandoned="true"
+              driverClassName="com.mysql.cj.jdbc.Driver"
+              url="jdbc:mysql://localhost:3306/bookLib?useSSL=false&amp;serverTimezone=UTC"
+              username="root"/>
+</Context>

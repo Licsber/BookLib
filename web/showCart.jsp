@@ -104,7 +104,7 @@
                 </td>
                 <td class="shopEnd"><br/>商品总价（不含运费）:
                     <label id="total" class="yellow">0</label>元<br/><br/>
-                    <a class="bn" href="">立刻购买</a></td>
+                    <a id='confirm' class="bn" type="submit" href="DoCarServlet?action=立即购买&bookNos=">立刻购买</a></td>
             </tr>
         </table>
     </form>

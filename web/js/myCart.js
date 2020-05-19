@@ -30,5 +30,7 @@ function check() {
 
     var removeSelect = document.getElementById("removeSelect");
     removeSelect.href = 'DoCarServlet?action=removeselect&bookNos=' + bookNos;
+    var confirm = document.getElementById("confirm");
+    confirm.href = 'DoCarServlet?action=立即购买&bookNos=' + bookNos;
     document.getElementById('total').innerHTML = sum;
 }

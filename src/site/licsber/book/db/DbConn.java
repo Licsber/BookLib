@@ -9,6 +9,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.List;
 
+// 自己的方法
 public class DbConn {
     static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
     static final String DB_URL = "jdbc:mysql://localhost:3306/bookLib?useSSL=false&serverTimezone=UTC";
